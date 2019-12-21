@@ -1,0 +1,37 @@
+<!-- <p>table works!</p>
+<h1>Product</h1>
+<div *ngfor="let product of products">
+    <h1> {{product.name}}</h1>
+
+</div> -->
+
+<p>{{a}}</p>
+<!-- <div class="container"> -->
+    <div >
+        <table class="table table-striped" width ="100%">
+                <!-- border="1" -->
+          
+              <tr>
+                <th>Title</th>
+                <th> Bg_color</th>
+                <th>Bg_image</th>
+                <th>Skill_id</th>
+                <th>Games_list</th>
+                <th>Theme</th>
+                <th>Theme_noaction</th>
+              </tr>
+          
+        
+            <tr *ngFor="let list of b">
+                    <!-- <a [title]="list.bg_color + ' details'"> -->
+              <td [title]="list.title">{{ list.title}}</td>
+              <td [title]="list.bg_color">{{ list.bg_color }}</td>
+              <td [title]="list.bg_image">{{ list.bg_image  }}</td>
+              <td [title]="list.skill_id">{{ list.skill_id  }}</td>
+              <td [title]="list.games_list">{{ list.games_list  }}</td>
+              <td [title]="list.theme">{{ list.theme  }}</td>
+              <td [title]="list.theme_noaction ">{{ list.theme_noaction }}</td>
+            </tr>
+       
+        </table>
+      </div>

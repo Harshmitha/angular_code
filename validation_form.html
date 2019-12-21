@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <script>
+            function sendData(){
+var Obj={
+    first_name:document.getElementById('a1').value,
+    last_name:document.getElementById('a2').value,
+    middle_name:document.getElementById('a3').value,
+    email:document.getElementById('a4').value,
+    mobile_no:document.getElementById('a5').value,
+    user_name:document.getElementById('a6').value,
+    password:document.getElementById('a7').value,
+}
+console.log(Obj)
+localStorage.setItem("personDetails", JSON.stringify(Obj));
+// var getData=JSON.parse(localStorage.getItem('personDetails'))
+// console.log('getDatainLocal',getData)
+document.getElementById('a11').value=getData.first_name
+document.getElementById('a21').value=getData.last_name
+document.getElementById('a31').value=getData.middle_name
+document.getElementById('a41').value=getData.email
+document.getElementById('a51').value=getData.mobile_no
+document.getElementById('a61').value=getData.user_name
+// if(obj.password==""){
+//     alert("Enter the Password of minimum length 6")
+// }
+document.getElementById('a71').value=getData.password
+}
+
+
+            </script>
+        
+        <style>
+            h1{
+                color: brown;
+            }
+            body{
+            background-image : url("imag.jpg");
+            background-size: 50% ;    
+        }
+        </style>
+        </head>
+        <body>
+                <center>
+           <br><br> <h1> Sign Up Page</h1><br><br>
+            <table>
+                <tr>
+                    <td>
+                            First Name:
+                            <td>
+                                    <br> <input type="text" name="first_name" id="a1" placeholder="First Name" required><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            Last Name:
+                            <td>
+                                    <br> <input type="text" name="last_name" id="a2" placeholder="Last Name" required><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            Middle Name:
+                            <td>
+                                    <br><input type="text" name="middle_name" id="a3" placeholder="Middle Name" required><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                        <td>
+                                <br> <input type="email" name="email" id="a4" placeholder="Email id" required><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mobile Number:
+                        <td>
+                                <br>  <input type="number" name="mobile_no" id="a5" placeholder="Mobile Number" required><br><br>
+                    </td>
+                </tr>
+                <tr>
+                   <td>
+                       User Name:
+                       <td>
+                            <br> <input type="text" name="user_name" id="a6" placeholder="User Name" required><br><br>
+                   </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        password
+                        <td>
+                                <br> <input type="password" name="password" minlength="6" id="a7" placeholder="Password" required><br><br>
+                                
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <br>
+                       <br>
+                       <button type="button" onclick="sendData()">submit</button>
+                       
+                        
+                        </td>
+                </tr>
+                <!-- <tr>
+                    <td>
+                            <p> Already have an account? <a href="login.html">click to login </a> </p>
+                    </td>
+                </tr> -->
+            </table>
+            <p> Already have an account? <a href="login.html" style="color: crimson">click to login </a> </p>
+<hr>
+First Name:<input type="text" name="first_name" id="a11" placeholder="First Name" required>
+Last Name:<input type="text" name="last_name" id="a21" placeholder="Last Name" required>
+Middle Name:<input type="text" name="middle_name" id="a31" placeholder="Middle Name" required>
+Email: <input type="email" name="email" id="a41" placeholder="Email id" required>
+Mobile Number:<input type="number" name="mobile_no" id="a51" placeholder="Mobile Number" required>
+User Name:<input type="text" name="user_name" id="a61" placeholder="User Name" required>
+password<input type="password" name="password" id="a71" placeholder="Password" required>
+        </body>
+        </center>
+</html>

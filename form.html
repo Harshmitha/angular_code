@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <script>
+//             function check1() {
+//     document.getElementById("radio1").checked = true;
+// }
+// function check2() {
+//     document.getElementById("radio2").checked = true;
+// }
+// function check3() {
+//     document.getElementById("radio3").checked = true;
+// }
+            
+            function check(id){
+                if(id==drop1){document.getElementById("radio1").checked=true;}
+                if(id==drop2){document.getElementById("radio2").checked=true;}
+                if(id==drop3){document.getElementById("radio3").checked=true;}
+            }
+
+            function box(id){
+                if(id==drp1){
+                    document.getElementById("chk1").checked=true;
+                    document.getElementById("chk2").checked=false;
+                    document.getElementById("chk3").checked=false;
+                    }
+                if(id==drp2){
+                document.getElementById("chk2").checked=true;
+                document.getElementById("chk1").checked=false;
+                document.getElementById("chk3").checked=false;
+                }
+                if(id==drp3){
+                document.getElementById("chk3").checked=true;
+                document.getElementById("chk1").checked=false;
+                document.getElementById("chk2").checked=false;
+                   
+                }
+            }
+
+            
+            </script>
+        <style>
+             h1{
+            background-color:rgb(131, 182, 131);
+           
+            padding:2px;
+            
+        }
+        p{
+            margin:10px;
+            padding:5px;
+        }
+        body{
+            border:30px solid rgb(131, 182, 131);
+            background-color:rgb(243, 235, 235);
+        }
+         
+        table{
+            margin: 20px;
+            padding: 10px;
+        }
+        </style>
+       
+    </head>
+    <center>
+    <body >
+        <h1>
+            Survey Form
+        </h1>
+   <p> Let us know how we can improve freeCodeCamp</p>
+    <table>
+        <tr>
+            <td>* Name:</td>
+                     
+                  <td>  
+                  <input type="text" name="name" placeholder="Enter your nmae" required><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>* Email:</td>
+                     
+                <td>
+                <input type="email" name="email" placeholder="Enter your Email" required><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td> * Age:</td>   
+                <td>
+                <input type="text" name="age" placeholder="Age" required><br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 Which option best describes your current role?
+                <td>
+                <select  name="which option best describes your current role?">
+                    <option onclick="check(drop1)" id="drop1" value="student">Student</option>
+                    <option onclick="check(drop2)" id="drop2" value="employee">Employee</option>
+                    <option onclick="check(drop3)" id="drop3" value="other">Other</option>
+                </select><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                    * How likely is that you would recommend
+              <br> freeCodeCamp to a friend?:
+              <td >
+                  
+            <br>  <input type="radio" name="freecodecamp" id="radio1" value="definitely">Definitely<br>
+                <input type="radio" name="freecodecamp" id="radio2" value="maybe">Maybe<br>
+                <input type="radio" name="freecodecamp" id="radio3" value="not sure">Not sure<br><br>
+            </td> 
+        </tr>
+        <tr>
+            <td>
+                    What do you like most in FCC:
+                <td>
+                <select name="What do you like most in FCC">
+                        <option  value="select an option">Select an Option</option>
+                        <option onclick="box(drp1)" id="drp1" value="html">HTML</option>
+                        <option onclick="box(drp2)" id="drp2" value="jsp">JSP</option>
+                        <option onclick="box(drp3)" id="drp3" value="js">JS</option>
+                    </select><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                     Things that should be improved in the future
+                <br>(check all that apply)
+                <td>
+                   <br> <input type="checkbox" id="chk1" name="future" value="front-end projects">Front-end Projects<br>
+                    <input type="checkbox" id="chk2" name="future" value="back-end projects">Back-end Projects<br>
+                    <input type="checkbox" id="chk3" name="future" value="data visulization">Data Visulization<br><br>
+            </td>
+        </tr>
+    </table>
+    </body>
+</center>
+</html>

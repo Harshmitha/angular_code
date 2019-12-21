@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <style>
+        h1{
+            color: brown;
+            font-style: italic;
+            margin:30px;
+            padding: 50px;
+
+        }
+        body{
+            background-image : url("imag.jpg");
+            background-size: 100% ;
+            
+           
+        }
+        input[type="text"] {
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+}
+
+        
+    </style>
+        
+        <script>
+            function no()
+        {
+            var a = Number(document.getElementById("age").value);
+        
+            if(a<18)
+            {
+                alert("under 18");
+            }else{
+                alert("adult ");
+            }
+        } 
+        </script>
+        </head>
+        <center>
+        <body>
+            <h1>Checking the age of a Person</h1>
+        Enter age: <input type="text" id="age"><br><br>
+        <button onclick="no()">click</button>
+        
+    </center>   
+                
+                
+        </body>
+
+</html>

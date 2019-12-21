@@ -1,0 +1,149 @@
+<!-- <html>
+    <head>
+        <title>Learning JavaScript</title>
+        <script>
+            var name = document.getElementById('name');
+            var pw = document.getElementById('pw');
+
+// storing input from register-form
+// function store() {
+//     localStorage.setItem('name', name.value);
+//     localStorage.setItem('pw', pw.value);
+// }
+
+
+// check if stored data from register-form is equal to entered data in the   login-form
+function check() {
+
+    // stored data from the register-form
+    var storedName = localStorage.getItem('name');
+    var storedPw = localStorage.getItem('pw');
+
+    // entered data from the login-form
+    var userName = document.getElementById('userName').value;
+    var userPw = document.getElementById('userPw').value;
+
+    // check if stored data from register-form is equal to data from login form
+    if(userName.value == storedName && userPw.value == storedPw) {
+        alert('You are loged in.');
+    }else {
+        alert('ERROR.');
+    }
+}
+        </script>
+    </head>
+    <body>
+        <form id="register-form"> 
+            <input id="name" type="text" placeholder="Name" value=""/>
+            <input id="pw" type="password" placeholder="Password" value=""/>
+            <input id="rgstr_btn" type="submit" value="get Account" onClick="store()"/> 
+        </form>
+
+        <form id="login-form"> 
+            <input id="userName" type="text" placeholder="Enter Username" value=""/>
+            <input id="userPw" type="password" placeholder="Enter Password" value=""/>
+            <input id="login_btn" type="submit" value="Login" onClick="check()"/> 
+       </form>
+
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" language="javascript" src="login.js"></script>
+
+    </body>
+</html> -->
+
+
+
+<html>
+
+<head>
+    <script>
+        // Name and Password from the register-form
+        var a61 = document.getElementById('a61');
+        var a71 = document.getElementById('a71');
+
+        // // storing input from register-form
+        // function store() {
+        //     localStorage.setItem('a61', a61.value);
+        //     localStorage.setItem('a71',a71.value);
+        // }
+
+        // check if stored data from register-form is equal to entered data in the   login-form
+        function check() {
+
+            // stored data from the register-form
+            var storedName = localStorage.getItem('a61');
+            var storedPw = localStorage.getItem('a71');
+
+            // entered data from the login-form
+            var b11 = document.getElementById('b11').value;
+            var b21 = document.getElementById('b21').value;
+
+            console.log('enterusename,pwd', b11, b21)
+            console.log('get', storedName, storedPw)
+            
+            // check if stored data from register-form is equal to data from login form
+            // if(userName.value !== storedName || userPw.value !== storedPw) {
+            //     alert('ERROR');
+            // }else {
+            //     alert('You are loged in.');
+            // }
+            if (b11 == storedName && b21 == storedPw) {
+                alert('Login Successful !!!');
+            } else {
+                alert('Please check username and password');
+            }
+        }
+    </script>
+    <style>
+        h1 {
+            color: brown;
+        }
+
+        body {
+            background-image: url("imag.jpg");
+            background-size: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <br><br>
+        <h1> Login Page</h1><br><br>
+        <table>
+            <tr>
+                <td>
+                    User Name:
+                <td>
+                    <br> <input type="text" name="user_name" id="b11" placeholder="User Name" required><br><br>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    password
+                <td>
+                    <br> <input type="password" name="password" id="b21" placeholder="Password" required><br><br>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <br>
+                    <button type="button" onClick="check()">Login</button>
+
+                </td>
+            </tr>
+            <!-- <tr>
+                    <td>
+                            <p> Already have an account? <a href="login.html">click to login </a> </p>
+                    </td>
+                </tr> -->
+        </table>
+        <p> Don't have an account? <a href="validation_form.html" style="color: crimson">click here to Sign up </a> </p>
+
+</body>
+</center>
+
+</html>

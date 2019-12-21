@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            function add()
+            {   
+                var x,y,z;
+                x=parseInt(document.getElementById("a").value);
+                y=parseInt(document.getElementById("b").value);
+                z=x+y;
+                document.getElementById("res").value=z;
+            }
+            
+            </script>
+        <body>
+            <div>
+                Enter First value:
+            <input type="number" id="a" name="enter first value" ><br><br>
+        </div>
+        <div>
+            Enter Second value:
+            <input type="number" id="b" name="enter second value"><br><br>
+        </div>
+        <div>
+            <input type="submit" onclick="add()" id="s" value="submit"><br><br>
+        </div>
+        <div>
+                Result:
+                <input type="text" id="res" name="result">
+                            
+        </div>
+    </body>  
+    </head>
+</html>

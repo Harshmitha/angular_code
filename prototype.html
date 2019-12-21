@@ -1,0 +1,27 @@
+<html>
+<body>
+	<h1>Demo: Prototype</h1>
+	<script>    
+	function Student() {
+		this.name = 'John';
+		this.gender = 'Male';
+	}
+
+	Student.prototype.age = 15;
+
+	var studObj1 = new Student();
+	alert('studObj1.age = ' + studObj1.age); 
+
+	var studObj2 = new Student();
+	alert('studObj2.age = ' + studObj2.age); 
+
+	Student.prototype = { age : 20 };
+
+	var studObj3 = new Student();
+	alert('studObj3.age = ' + studObj3.age); 
+
+	alert('studObj1.age = ' + studObj1.age); 
+	alert('studObj2.age = ' + studObj2.age); 
+	</script>	
+</body>
+</html>

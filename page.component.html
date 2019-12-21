@@ -1,0 +1,22 @@
+<!-- <header>
+    <div class="container">
+        <a routerLink="/" class="logo">apptitle</a>
+        <nav>
+            <ul>
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/">About</a></li>
+                <li></li>
+            </ul>
+        </nav>
+    </div>
+</header> -->
+<!-- <button onclick="document.getElementById('image').src='../../assets/bulbon.jpg'">on</button>
+<img id="image" src="../../assets/bulb.jpg" width="100" height="180">
+<button onclick="document.getElementById('image').src='../../assets/bulb.jpg'">off</button> -->
+    
+    <img src="../../assets/bulb.jpg" *ngIf="bulbOff" style="width:30%;height:30%;">
+    <img src="../../assets/bulbon.jpg" *ngIf="bulbOn" style="width:30%;height:30%;">
+    <br>
+    <button (click)="on()">On</button>
+    <button (click)="off()">Off</button>
+   

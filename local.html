@@ -1,0 +1,76 @@
+<html>
+<head>
+    <center><h1>login</h1></center>
+</head>
+<style>
+body
+{
+background-color:pink;
+color:black;
+font-size:28;
+font-style:bold;
+}
+h1
+{
+font-size:28;
+color:blue;
+}
+</style>
+<script>
+function sendData(){
+var Obj={
+firstname:document.getElementById('a1').value,
+lastname:document.getElementById('a2').value,
+password:document.getElementById('a3').value,
+email:document.getElementById('a4').value,
+gender:document.getElementById('a5').value,
+}
+console.log(Obj)
+localStorage.setItem("personDetails", JSON.stringify(Obj));
+var getData=JSON.parse(localStorage.getItem('personDetails'))
+console.log('getDatainLocal',getData)
+document.getElementById('firstname1').value=getData.firstname
+document.getElementById('lastname1').value=getData.lastname
+document.getElementById('password1').value=getData.password
+document.getElementById('email1').value=getData.email
+document.getElementById('gender1').value=getData.gender
+}
+</script>
+<body>
+<table border="3px" align="center" >
+<tr>
+    <td>
+first name:<td><input type="text" placeholder="enter the name" id="a1" ></td>
+</tr>
+<tr>
+    <td>
+last name:<td><input type="text" id="a2"></td>
+</tr>
+<tr>
+    <td>
+password:<td><input type="password"  id="a3"></td>
+</tr>
+<tr>
+    <td>
+gmail:<td><input type="mail" id="a4"></td>
+</tr>
+<tr>
+    <td>
+gender:
+<td>Gender<select id="a5">
+<option>selectgender</option>
+<option>male</option>
+<option>female</option>
+</select>
+</td>
+<button type="button" onclick="sendData()">submit</button>
+</td></tr>
+</table>
+<hr>
+FirstName:<input id="firstname1">
+LastName:<input id="lastname1">
+Password:<input type="password" id="password1">
+Email:<input id="email1">
+Gender:<input id="gender1">
+</body>
+</html>

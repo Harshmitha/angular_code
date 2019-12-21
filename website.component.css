@@ -1,0 +1,27 @@
+nav {
+    background-color: #1976D2;
+    color: white;
+    padding: 22px;
+}
+/* nav ul {
+    list-style-type: none;
+    padding: 0;
+  } */
+a{
+    /* color: white;
+    margin-left: 25px;
+    font-size: 20px;
+    text-decoration: none; */
+    /* list-style-type: none;
+    padding: 0; */
+    /* float: left; */
+    /* display: block; */
+  color: white;
+  text-align: center;
+  /* padding: 14px 16px; */
+  padding: 20px;
+  text-decoration: none;
+}
+a:hover{
+   background-color: red;
+}
