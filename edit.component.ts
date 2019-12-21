@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-form1',
-  templateUrl: './form1.component.html',
-  styleUrls: ['./form1.component.css']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
-export class Form1Component implements OnInit {
-reg: FormGroup;
+export class EditComponent implements OnInit {
+  reg: FormGroup;
+data1:string
+user1:string
+user2:string
+user3:string
+user4:string
+user5:string
   constructor(private router:Router) {
     this.reg = new FormGroup({
       name: new FormControl(''),
@@ -18,13 +24,17 @@ reg: FormGroup;
       gender: new FormControl(''),
     })
    }
-login(){
-  this.router.navigateByUrl("login1")
-}
-update(){
-  this.router.navigateByUrl("crud")
-}
+
   ngOnInit() {
+    let data1 = JSON.parse(localStorage.getItem("userDetails"))
+    console.log(data1)
+    this.user1=data1.Name
+    this.user2=data1.Email
+    this.user3=data1.Password
+    this.user4=data1.Mobile
+    this.user5=data1.Gender
+
+
   }
   submit(data){
     console.log("value",data.value);
@@ -36,6 +46,11 @@ update(){
       Gender: data.value.gender
     }
     localStorage.setItem("userDetails",JSON.stringify(UserData ))
-    this.router.navigateByUrl("login")
+    this.router.navigateByUrl("crud")
+  }
+  update(){
+    this.router.navigateByUrl("crud")
   }
 }
+
+

@@ -8,35 +8,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./form2.component.css']
 })
 export class Form2Component implements OnInit {
-  reg: FormGroup;
+  loginForm:FormGroup
 
-  constructor(private router: Router) {
-    this.reg = new FormGroup({
-      name: new FormControl(''),
+  constructor(private router: Router) { 
+    this.loginForm = new FormGroup({
       email: new FormControl(''),
-      password: new FormControl(''),
-      mobile: new FormControl(''),
-      address: new FormControl(''),
-      gender: new FormControl(''),
-
+      password: new FormControl('')
+      
     })
-   }
-   login(){
-     this.router.navigateByUrl("form1");
-   }
+  }
+  
+
 
   ngOnInit() {
   }
-save(data){
-  console.log("value",data.value);
-  let UserData = {
-      Name: data.value.name,
-      Email: data.value.email,  
-      Password: data.value.password,
-     Mobile: data.value.mobile,
-      Address: data.value.address,
-      Gender: data.value.gender,
-  }
-  localStorage.setItem("userDetails",JSON.stringify(UserData))
+  login(data){
+    let data1 = JSON.parse(localStorage.getItem("userDetails"))
+    let em = data1.Email;
+    let ps = data1.Password;
+    if(em == data.value.email && ps == data.value.password){
+      alert("Login Successfully");
+    }else{
+      alert("Please check email and password")
+    }
+
 }
 }

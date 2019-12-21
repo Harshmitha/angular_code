@@ -1,0 +1,27 @@
+<p>jsoncrud works!</p>
+<form [formGroup]="save">
+    <label>Id:</label><br>
+    <input type="text" formControlName="id" [(ngModel)]="id"><br>
+    <label>User Name:</label><br>
+    <input type="text" formControlName="user_name" [(ngModel)]="user_name"><br>
+    <label>Password:</label><br>
+    <input type="password" formControlName="password" [(ngModel)]="password"><br><br>
+    <button (click)="store(save)">Insert</button>&nbsp;&nbsp;
+    <button (click)="store1()">Display</button>
+</form>
+<br>
+<br>
+<label>ID</label>
+<input type="text" [(ngModel)]="rid" placeholder="Enter id to be deleted">
+<button (click)="store2()">Delete</button>
+<br>
+<br>
+<table border="1px solid black">
+    <tr *ngFor="let val of sdata;let i=index">
+        <td>{{i}}</td>
+        <td>{{val.id}}</td>
+        <td>{{val.user_name}}</td>
+        <td>{{val.password}}</td>
+        <td><button (click)="store3(val)">Update</button></td>
+    </tr>
+</table>

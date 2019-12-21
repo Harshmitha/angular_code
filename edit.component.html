@@ -1,0 +1,27 @@
+
+<form [formGroup]="reg">
+        <body background="../../assets/imageo.jpg">
+        <div class=b>
+        <h1>Registration Form</h1><br><br><br>
+        Name:
+        <p><input type="text" formControlName="name" placeholder="Enter Name" [(ngModel)]="user1"></p><br><br>
+        Email id:
+        <p><input type="text" formControlName="email" placeholder="Enter email"  [(ngModel)]="user2"></p><br><br>
+        Password:
+        <p><input type="password" formControlName="password" placeholder="Enter Password"  [(ngModel)]="user3"></p><br><br>
+        Mobile NO:
+        <p><input type="text" formControlName="mobile" placeholder="Enter Mobile No."  [(ngModel)]="user4"></p><br><br>
+        Gender:
+       <p> <select  formControlName="gender"  [(ngModel)]="user5">
+            <option>Male </option>
+            <option>Female</option>
+        </select></p><br><br><br>
+        <button (click)="submit(reg)">Submit</button>&nbsp;
+        <!-- <button (click)="login()">Login</button>&nbsp;
+        <button (click)="update()">Update</button>
+       <p> <a [routerLink]="['/home']">Click here to go Back</a></p> -->
+       
+    </div>
+    </body>
+    </form>
+    

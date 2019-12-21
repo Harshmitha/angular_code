@@ -1,0 +1,25 @@
+input[type=text] {
+    width: 15%;
+    padding: 8px;
+    border: none;
+    background-color:lavender;
+  
+  }
+  input[type=password] {
+    width: 15%;
+    padding: 8px;
+    border: none;
+    background-color:lavender;
+  
+  }
+  select{
+    width: 16%;
+    padding: 8px;
+    border: none;
+    background-color:lavender;
+  }
+ .b{
+     text-align: center;
+     
+    
+ }

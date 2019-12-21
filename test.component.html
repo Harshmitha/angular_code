@@ -1,0 +1,7 @@
+<div *ngFor="let follower of followers" class="media">
+    
+    
+    <h4 >
+      <a [routerLink]="['/test',follower.id]">{{ follower.login }}</a></h4>
+    
+</div>

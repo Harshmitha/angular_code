@@ -1,0 +1,17 @@
+<table>
+    <tr>
+    <th>User Id</th>
+    <th> Name</th>
+    <!-- <th>Last Name</th> -->
+    <th>JobTitle</th>
+    <th>PhoneNumber</th>
+    </tr>
+    <tr *ngFor="let data of employeeData">
+    <td>{{data.userId}}</td>
+    <td>{{data.name.firstName + "        " + data.name.lastName}}</td>
+    <!-- <td>{{data.name.lastName}}</td> -->
+    <td>{{data.jobTitleName}}</td>
+    <td>{{data.phoneNum}}</td>
+    </tr>
+</table>
+

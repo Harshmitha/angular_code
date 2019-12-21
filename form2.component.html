@@ -1,20 +1,12 @@
-<form [formGroup]="reg">
-    <h1>Registration Form</h1>
-    Name:
-    <input type="text" formControlName="name" placeholder="Enter Name"><br><br>
-    Email id:
-    <input type="text" name="emailid" formControlName="email" placeholder="Enter Email-id" ><br><br>
-    Password:
-    <input type="password" name="passwd" formControlName="password" placeholder="Enter Password" ><br><br>
-    Mobile No.:
-    <input type="number" name="mobile" formControlName="mobile" placeholder="Enter Mobile.no"><br><br>
-    Address:
-    <input type="text" name="address" formControlName="address" placeholder="Enter Address"><br><br>
-    Gender:<select formControlName="gender">
-        <option>Male</option>
-        <option>Female</option>
-    </select><br><br>
-    <button (click)="save(reg)">Save</button>&nbsp;
-    <button (click)="login()">Login</button>
-    
+<div class="b">
+<p>Login Form</p><br><br><br>
+<form [formGroup]="loginForm">
+        Email id:
+        <p><input type="text" formControlName="email" placeholder="Enter email"></p><br><br>
+        Password:
+        <p><input type="password" formControlName="password" placeholder="Enter Password"></p><br><br>
+        <button (click)="login(loginForm)">Login</button>
+        <p> <a [routerLink]="['/login']">Click here to go Back</a></p>
 </form>
+
+</div>

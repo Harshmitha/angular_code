@@ -1,9 +1,17 @@
 <form [formGroup]="reg">
-    <body background="../../assets/imageo.jpg">
+    <!-- <form> -->
+    <body>
     <div class=b>
     <h1>Registration Form</h1><br><br><br>
-    Name:
-    <p><input type="text" formControlName="name" placeholder="Enter Name"></p><br><br>
+    <div>
+    <!-- <div class="form-group"> -->
+        <label for="ename">Ename</label>
+        <input required id="ename" name="ename" [(ngModel)]="enamenew"
+        type="text" class="form-control" #ename=ngModel>
+
+    </div>
+    <!-- Name:
+    <p><input  type="text" formControlName="name" placeholder="Enter Name" required></p><br><br>
     Email id:
     <p><input type="text" formControlName="email" placeholder="Enter email"></p><br><br>
     Password:
@@ -14,11 +22,10 @@
    <p> <select  formControlName="gender">
         <option>Male </option>
         <option>Female</option>
-    </select></p><br><br><br>
+    </select></p><br><br><br>  --><br><br>
     <button (click)="submit(reg)">Submit</button>&nbsp;
-    <button (click)="login()">Login</button>&nbsp;
-    <button (click)="update()">Update</button>
-   <p> <a [routerLink]="['/home']">Click here to go Back</a></p>
+    <button (click)="login()">Login</button>
+   <!-- <p> <a [routerLink]="['']">Click here to go Back</a></p> -->
    
 </div>
 </body>

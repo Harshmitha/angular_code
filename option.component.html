@@ -1,0 +1,26 @@
+<!-- <h1>Multiple-choice Questions — Select One Answer Choice Sample Questions</h1><br>
+<div>
+<label>1. Which is your favorite Colour</label><br>
+<p *ngFor="let a of b"  >
+<input type="radio" name="q" (click)="display(a)">{{a}}</p>
+<hr>
+<label>2. Which is your favorite Place </label><br>
+<p *ngFor="let a of c">
+<input type="radio" name="w" (click)="display(a)">{{a}}</p>
+<hr>
+<label>3. Which is your favorite type of Food</label><br>
+<p *ngFor="let a of d">
+<input type="radio" name="e" (click)="display(a)">{{a}}</p>
+<hr>
+<label>4. Which is your favorite Chocolate</label><br>
+<p *ngFor="let a of e">
+<input type="radio" name="r"  (click)="display(a)">{{a}}</p>
+<hr>
+<label>5. Which is your favorite Beach</label><br>
+<p *ngFor="let a of f">
+<input type="radio" name="t" (click)="display(a)">{{a}}</p>
+<button class="btn btn-primary col-md-1" (click)="show()">Submit</button>
+</div> -->
+<span *ngFor='let a of data'>{{a.question}}<p *ngFor='let b of a.option'>
+    <input type="radio" (click)="harsh(b)">{{b|titlecase}}</p></span>
+<button (click)="submit()">Submit</button>

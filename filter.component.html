@@ -1,0 +1,103 @@
+ <!-- <html>
+<body>
+    <div>
+    <input type="text" (click)="fun()" placeholder="Search for names..">
+
+     <img src="./assets/search.jpg" width="30px" height="20px"> 
+</div>
+
+    <table>
+        <tr>
+            <th style="width: 60%">Name</th>
+            <th style="width: 40%">Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Bergluds Snabbkop</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Koniglich Essen</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bancchus Winecellars</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari </td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris Specialities</td>
+            <td>France</td>
+        </tr>
+    </table>
+</body>
+</html>  -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div>
+   <table class="table">
+     <thead>
+       <tr>
+         <th>First Name</th>
+         <th>Last name</th>
+         <th >Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+         <th>Points</th>
+       </tr>
+     </thead>
+     <!-- <tbody>
+       <tr>
+         <td>{{fn[0]}}</td>
+         <td>{{ln[0]}}</td>
+         <td *ngFor="let a of pt">{{a}}</td>
+         <td *ngFor="let a of pt">{{a}}</td>
+         <td *ngFor="let a of pt">{{a}}</td>
+         </tr>
+         <tr>
+                <td>{{fn[1]}}</td>
+                <td>{{ln[1]}}</td>
+                <td *ngFor="let b of pt1">{{b}}</td>
+                <td *ngFor="let b of pt1">{{b}}</td>
+                <td *ngFor="let b of pt1">{{b}}</td>
+                </tr>
+                <tr>
+                        <td>{{fn[2]}}</td>
+                        <td>{{ln[2]}}</td>
+                        <td *ngFor="let c of pt2">{{c}}</td>
+                        <td *ngFor="let c of pt2">{{c}}</td>
+                        <td *ngFor="let c of pt2">{{c}}</td>
+                        </tr>
+
+         
+     </tbody> -->
+     <span *ngFor='let a of fn'><p>{{a|titlecase}}</p></span>
+     <td><span *ngFor='let b of ln'><p>{{b}}</p></span></td>
+     <td *ngFor='let z of a'><span *ngFor='let c of pt'><p>{{c}}</p></span> </td>
+   
+   </table>
+   
+ </div> 

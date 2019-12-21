@@ -1,0 +1,24 @@
+<p>crud works!</p>
+<html>
+    <body>
+        <table border="2px solid black">
+            <tr>
+                <th>Name</th>
+                <th>Email id</th>
+                <th>Password</th>
+                <th>Mobile</th>
+                <th>Gender</th>
+            </tr>
+            <tr>
+                <td>{{res.Name}}</td>
+                <td>{{res.Email}}</td>
+                <td>{{res.Password}}</td>
+                <td>{{res.Mobile}}</td>
+                <td>{{res.Gender}}</td>
+            </tr>
+        </table><br><br>
+        <p> <a [routerLink]="['/edit']">Edit</a></p>
+        <button (click)="delete()">Delete</button>
+        
+    </body>
+</html>
